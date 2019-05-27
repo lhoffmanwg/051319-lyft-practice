@@ -17,6 +17,10 @@ class Ride
   end
 
   def self.average_distance
+    ary = @@all.collect do |ride|
+      ride.distance
+    end
+    (ary.sum/ary.count.to_f).round(1)
 		# Return the average distance travelled
 		# per instance of Ride. This is a good
 		# example of a problem that you may see

@@ -70,7 +70,10 @@ RSpec.describe "Lyft domain" do
 
       it "#longest_ride returns the longest ride for the driver" do
         expect(@d2.longest_ride).to eq(@r4)
-        expect(@d3.rides).to eq(@r6)
+        expect(@d3.longest_ride).to eq(@r6)
+
+        #expect(@d3.rides).to eq(@r6)
+
       end
     end
   end
@@ -108,7 +111,9 @@ RSpec.describe "Lyft domain" do
       end
 
       it ".find_all_by_pattern accepts a string, and returns all Passengers whose name includes the given string" do
+
         expect(Passenger.find_all_by_pattern("B").length).to be(3)
+
         expect(Passenger.find_all_by_pattern("Jess")).to include(@p3, @p4)
         expect(Passenger.find_all_by_pattern("essi")).not_to include(@p1, @p2)
       end

@@ -9,7 +9,7 @@ d3 = Driver.new("Cody G")
 p1 = Passenger.new("Ben H")
 p2 = Passenger.new("Jason B")
 p3 = Passenger.new("Jessica B")
-p4 = Passenger.new("Matt B")
+p4 = Passenger.new("Jessica P")
 
 # Rides
 r1 = Ride.new(d1, p1, 4.2)
